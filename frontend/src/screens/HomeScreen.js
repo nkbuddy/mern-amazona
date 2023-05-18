@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useState } from "react";
+import React,{ useEffect, useReducer, useState } from "react";
 import axios from "axios";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -27,7 +27,7 @@ function HomeScreen() {
     loading: true,
     error: "",
   });
-  // const [products, setProducts] = useState([]);
+  //const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       dispatch({ type: "FETCH_REQUEST" });
@@ -38,7 +38,7 @@ function HomeScreen() {
         dispatch({ type: "FETCH_FAIL", payload: err.message });
       }
 
-      // setProducts(result.data);
+      //setProducts(result.data);
     };
     fetchData();
   }, []);
